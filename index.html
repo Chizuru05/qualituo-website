@@ -1,74 +1,78 @@
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
-<!--  If necessary, please modify the charset parameter to specify the        -->
-<!--  character set of your HTML page.                                        -->
-<!--  ----------------------------------------------------------------------  -->
-
-<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <FORM> element to your page.             -->
-<!--  ----------------------------------------------------------------------  -->
-
-<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DQy000011Oucj" method="POST">
-
-<input type=hidden name="oid" value="00DQy000011Oucj">
-<input type=hidden name="retURL" value="https://chizuru05.github.io/qualituo-website/thank-you.html">
-
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-<!--  these lines if you wish to test in debug mode.                          -->
-<!--  <input type="hidden" name="debug" value=1>                              -->
-<!--  <input type="hidden" name="debugEmail"                                  -->
-<!--  value="obionwudiwezoe@gmail.com">                                       -->
-<!--  ----------------------------------------------------------------------  -->
-
-<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
-
-<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
-
-<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-
-<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
-
-<label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
-
-<label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
-
-Business Type:<select  id="00NQy00002ARE4v" name="00NQy00002ARE4v" title="Business Type"><option value="">--None--</option><option value="Farmer">Farmer</option>
-<option value="Cooperative">Cooperative</option>
-<option value="Buyer">Buyer</option>
-<option value="Logistics Provider">Logistics Provider</option>
-</select><br>
-
-Agricultural Product:<select  id="00NQy00002AREBN" name="00NQy00002AREBN" title="Agricultural Product"><option value="">--None--</option><option value="Cassava">Cassava</option>
-<option value="Maize">Maize</option>
-<option value="Rice">Rice</option>
-<option value="Yam">Yam</option>
-<option value="Tomato">Tomato</option>
-<option value="Other">Other</option>
-</select><br>
-
-Quantity (Tonnes):<input  id="00NQy00002AREJR" name="00NQy00002AREJR" size="20" type="text" /><br>
-
-State:<select  id="00NQy00002AREXx" name="00NQy00002AREXx" title="State"><option value="">--None--</option><option value="Imo">Imo</option>
-<option value="Rivers">Rivers</option>
-<option value="Abia">Abia</option>
-<option value="Anambra">Anambra</option>
-<option value="Enugu">Enugu</option>
-<option value="Other">Other</option>
-</select><br>
-
-Estimated Deal Value (NGN):<input  id="00NQy00002AREg1" name="00NQy00002AREg1" size="20" type="text" /><br>
-
-Qualituo Lead Priority:<select  id="00NQy00002ARW8I" name="00NQy00002ARW8I" title="Qualituo Lead Priority"><option value="">--None--</option><option value="High">High</option>
-<option value="Medium">Medium</option>
-<option value="Low">Low</option>
-<option value="Unqualified">Unqualified</option>
-</select><br>
-
-<input type="hidden"  id="lead_source" name="lead_source" value="Web" /><br>
-
-<input type="submit" name="submit">
-
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Connect with Qualituo for agricultural sourcing, buying, logistics and market access.">
+  <title>Join Qualituo | Agricultural Business Enquiry</title>
+  <style>
+    :root { --green:#166534; --deep:#123c2a; --pale:#eff8f0; --border:#d5e4da; --muted:#617568; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial,Helvetica,sans-serif; background:linear-gradient(135deg,#e8f5e9,#f7faf7); color:var(--deep); }
+    .topbar { background:#fff; border-bottom:1px solid var(--border); padding:19px max(20px,calc((100% - 1050px)/2)); font-size:23px; font-weight:800; color:var(--green); }
+    main { max-width:1050px; margin:52px auto; padding:0 20px; display:grid; grid-template-columns: .85fr 1.15fr; gap:48px; align-items:start; }
+    .intro { padding-top:28px; }
+    .eyebrow { font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--green); }
+    h1 { font-size:clamp(32px,4vw,48px); line-height:1.14; letter-spacing:-1.5px; margin:16px 0; }
+    .intro p { color:#52675a; line-height:1.75; font-size:16px; }
+    .benefits { margin-top:32px; display:grid; gap:16px; }
+    .benefit { display:flex; gap:12px; align-items:center; font-weight:600; }
+    .tick { background:#d6f0dd; color:var(--green); border-radius:50%; padding:7px; }
+    .card { background:white; border:1px solid #e0eae2; box-shadow:0 16px 48px rgba(20,70,35,.09); border-radius:20px; padding:32px; }
+    h2 { margin:0 0 8px; font-size:24px; }
+    .hint { color:var(--muted); margin:0 0 24px; line-height:1.5; font-size:14px; }
+    .fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:17px; }
+    .field { display:flex; flex-direction:column; gap:7px; }
+    .field.full { grid-column:1/-1; }
+    label { font-weight:600; font-size:13px; }
+    input:not([type=hidden]):not([type=submit]), select { width:100%; min-width:0; padding:12px; border:1px solid var(--border); border-radius:9px; background:white; color:#193e2c; font:inherit; font-size:14px; }
+    input:focus, select:focus { outline:2px solid #8bd4a2; outline-offset:1px; }
+    button { width:100%; background:var(--green); color:white; border:0; border-radius:10px; padding:15px; margin-top:24px; font-size:15px; font-weight:700; cursor:pointer; }
+    button:hover { background:#11512a; }
+    .fine { color:var(--muted); font-size:12px; text-align:center; margin:14px 0 0; line-height:1.5; }
+    footer { text-align:center; color:var(--muted); font-size:12px; padding:0 20px 30px; }
+    @media(max-width:800px) { main { grid-template-columns:1fr; gap:22px; margin:28px auto; } .intro { padding-top:0; } .card { padding:24px; } }
+    @media(max-width:480px) { .fields { grid-template-columns:1fr; } h1 { font-size:32px; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">Qualituo<span style="color:#83b995">.</span></header>
+  <main>
+    <section class="intro">
+      <div class="eyebrow">Agriculture · Market access · Connections</div>
+      <h1>Grow your agricultural business with Qualituo.</h1>
+      <p>Tell us what you grow, buy, or move. Qualituo is building connections between farmers, cooperatives, buyers, and logistics providers.</p>
+      <div class="benefits">
+        <div class="benefit"><span class="tick">✓</span> Connect with agricultural opportunities</div>
+        <div class="benefit"><span class="tick">✓</span> Share your sourcing or supply needs</div>
+        <div class="benefit"><span class="tick">✓</span> Explore logistics and market access</div>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Let's connect</h2>
+      <p class="hint">Fill in your details and we'll review your enquiry.</p>
+      <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&amp;orgId=00DQy000011Oucj" method="POST">
+        <input type="hidden" name="oid" value="00DQy000011Oucj">
+        <input type="hidden" name="retURL" value="https://chizuru05.github.io/qualituo-website/thank-you.html">
+        <input type="hidden" id="lead_source" name="lead_source" value="Web">
+        <div class="fields">
+          <div class="field"><label for="first_name">First name *</label><input id="first_name" maxlength="40" name="first_name" type="text" required autocomplete="given-name"></div>
+          <div class="field"><label for="last_name">Last name *</label><input id="last_name" maxlength="80" name="last_name" type="text" required autocomplete="family-name"></div>
+          <div class="field"><label for="email">Email *</label><input id="email" maxlength="80" name="email" type="email" required autocomplete="email"></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" maxlength="40" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field full"><label for="company">Company / farm / organization *</label><input id="company" maxlength="40" name="company" type="text" required autocomplete="organization"></div>
+          <div class="field"><label for="city">City</label><input id="city" maxlength="40" name="city" type="text" autocomplete="address-level2"></div>
+          <div class="field"><label for="00NQy00002AREXx">State</label><select id="00NQy00002AREXx" name="00NQy00002AREXx"><option value="">Select state</option><option value="Imo">Imo</option><option value="Rivers">Rivers</option><option value="Abia">Abia</option><option value="Anambra">Anambra</option><option value="Enugu">Enugu</option><option value="Other">Other</option></select></div>
+          <div class="field"><label for="00NQy00002ARE4v">Business type</label><select id="00NQy00002ARE4v" name="00NQy00002ARE4v"><option value="">Select business type</option><option value="Farmer">Farmer</option><option value="Cooperative">Cooperative</option><option value="Buyer">Buyer</option><option value="Logistics Provider">Logistics Provider</option></select></div>
+          <div class="field"><label for="00NQy00002AREBN">Agricultural product</label><select id="00NQy00002AREBN" name="00NQy00002AREBN"><option value="">Select product</option><option value="Cassava">Cassava</option><option value="Maize">Maize</option><option value="Rice">Rice</option><option value="Yam">Yam</option><option value="Tomato">Tomato</option><option value="Other">Other</option></select></div>
+          <div class="field"><label for="00NQy00002AREJR">Quantity (tonnes)</label><input id="00NQy00002AREJR" name="00NQy00002AREJR" type="number" min="0" step="any" placeholder="e.g. 10"></div>
+          <div class="field"><label for="00NQy00002AREg1">Estimated deal value (NGN)</label><input id="00NQy00002AREg1" name="00NQy00002AREg1" type="number" min="0" step="any" placeholder="e.g. 3500000"></div>
+        </div>
+        <button type="submit">Submit enquiry →</button>
+        <p class="fine">Your details will be sent to Qualituo for follow-up. Please don't submit sensitive personal information.</p>
+      </form>
+    </section>
+  </main>
+  <footer>© 2026 Qualituo · Connecting agricultural opportunities</footer>
+</body>
+</html>
